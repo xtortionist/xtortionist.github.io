@@ -21,13 +21,14 @@
 		<script src='data/javascripts/pace.min.js' type='text/javascript'></script>
 	</head>
 	<body id = "SrmgIndexArea">
-		<div>
+		<div id = "WebsiteLoadingContent">
+			<p class = 'SmallSegoeFontFace'> ❤ LOADING EXTORTIONIST BETA WEBSITE ❤ </p> 
+		</div>
+		
+		<div id = "WebsiteContent">
 
 			<script src='data/javascripts/utilities.js' type='text/javascript'></script>
-			<script src='data/javascripts/html5_audio_visualizer.js' type='text/javascript'></script>
-			
-			
-			
+
 			<div id = 'ProfileTopThreePlaylistItemWidgetAreaZero' class = 'WidgetArea'>
 
 				<a href="https://medium.com/@automatanism/story-f49faadd926d"> <p id = 'ProfileTopThreePlaylistItemWidgetAreaComponentZeroC' class = 'SmallSegoeFontFace'> STORY </p> </a>
@@ -58,6 +59,8 @@
 		<!-- Videos -->
 		<script>
 			$(function() {
+				//$("div#WebsiteContent").hide();
+				
 				var DESKTOP_MODE = screen.width >= 1224 ? true : false;
 
 				var BV = new $.BigVideo();
@@ -74,8 +77,13 @@
 					//vids.sort(function() { return 0.5 - Math.random() }); // random order on load
 					BV.init();
 					BV.show(vids,{ambient:true});
-					//BV.loop();
+					
+					BV.loop();
+					//$("div#WebsiteLoadingContent").hide();
+					//$("div#WebsiteContent").show();
 				}
+				
+
 			});
 		</script>
 	</body>
