@@ -23,6 +23,7 @@
 	<body id = "SrmgIndexArea">
 		<div id = "WebsiteLoadingContent">
 			<p class = 'SmallSegoeFontFace'> ❤ LOADING EXTORTIONIST BETA WEBSITE ❤ </p> 
+			<!--> <a href="https://xtortionist.github.io"> <p class = 'SmallSegoeFontFace'> ❤ FORCE_RELOAD ❤ </p> </a> -->
 		</div>
 		
 		<div id = "WebsiteContent">
@@ -58,6 +59,17 @@
 
 		<!-- Videos -->
 		<script>
+			//Reload Extortionist Website every 4.5 minutes, when video sequence is estimated to make full pass
+			window.setInterval('refresh()', 270000); 	
+			// Call a function every 270000 milliseconds (4.5 minutes)
+
+			// Refresh or reload page.
+			function refresh()
+			{
+				location.reload(true);
+			}
+		
+		
 			$(function() {
 				//$("div#WebsiteContent").hide();
 				
@@ -95,17 +107,6 @@
 
 					//$("div#WebsiteLoadingContent").hide();
 					//$("div#WebsiteContent").show();
-				}
-				
-				//Reload Extortionist Website every 4.5 minutes, when video sequence is estimated to make full pass
-				window.setInterval('refresh()', 270000); 	
-				// Call a function every 270000 milliseconds (4.5 minutes)
-
-				// Refresh or reload page.
-				function refresh()
-				{
-					location.reload(true);
-					location.href = location.href;
 				}
 			});
 		</script>
